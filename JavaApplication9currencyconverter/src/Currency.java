@@ -71,9 +71,9 @@ public class Currency extends javax.swing.JFrame {
         txtto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bangladeshi Taka", "Indian Rupees", "USD" }));
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 0));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 255, 0));
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Convert");
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,14 +88,18 @@ public class Currency extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 0, 0));
-        jButton2.setText("Exit");
+        jButton2.setText(" Exit ");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        txt1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txt1.setForeground(new java.awt.Color(255, 51, 0));
         txt1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Currency", "Temperature", "Weight", "Area", " ", " " }));
+        txt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
         txt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt1ActionPerformed(evt);
@@ -109,7 +113,7 @@ public class Currency extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(88, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -118,7 +122,8 @@ public class Currency extends javax.swing.JFrame {
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel3)))
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtamount, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -126,22 +131,16 @@ public class Currency extends javax.swing.JFrame {
                             .addComponent(x, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
                             .addComponent(txtto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(89, 89, 89))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel1))
-                    .addComponent(txtamount, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtamount, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -155,8 +154,8 @@ public class Currency extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(x, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(32, 32, 32))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -171,7 +170,7 @@ public class Currency extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -181,7 +180,7 @@ public class Currency extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-      Double tot;
+       Double tot;
       String box1 = txtfrom.getSelectedItem().toString();
       String box2 = txtto.getSelectedItem().toString();
       Double amount = parseDouble(txtamount.getText());
@@ -194,76 +193,78 @@ public class Currency extends javax.swing.JFrame {
       if(box1 == "USD" && box2 == "Bangladeshi Taka"){
         tot = amount * 93.45;
 //        JOptionPane.showMessageDialog(this,text+tot.toString());
-        JOptionPane.showMessageDialog(this,tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" Taka");
+        x.setText("  "+tot+" Taka");
       }
      else if(box1 == "USD" && box2 == "Indian Rupees"){
         tot = amount * 79.01;
-        JOptionPane.showMessageDialog(this,text +tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" Rupees");
+        x.setText("  "+tot+" Rupees");
       }
       
        else if(box1 == "Bangladeshi Taka" && box2 == "USD"){
         tot = amount / 93.45;
-        JOptionPane.showMessageDialog(this,text +tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" $");
+        x.setText("  "+tot+" $");
       }
       
        else if(box1 == "Indian Rupees" && box2 == "USD"){
         tot = amount * 79.01;
-        JOptionPane.showMessageDialog(this,text +tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" $");
+        x.setText("  "+tot+" $");
       }
       
         else if(box1 == "Indian Rupees" && box2 == "Bangladeshi Taka"){
         tot = amount * 1.18;
-        JOptionPane.showMessageDialog(this,text +tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" Taka");
+        x.setText("  "+tot+" Taka");
       }
-         else if(box1 == "Bangladeshi Taka" && box2 == "Indan Rupees"){
+         else if(box1 == "Bangladeshi Taka" && box2 == "Indian Rupees"){
         tot = amount / 1.18;
-        JOptionPane.showMessageDialog(this,text+tot.toString());
-        x.setText("  "+tot.toString());
+        JOptionPane.showMessageDialog(this,text+tot+" Rupees");
+        x.setText("  "+tot+" Rupees");
       }
-         else if(box1 == "Indan Rupees" && box2 == "Indan Rupees"){
+         else if(box1 == "Indan Rupees" && box2 == "Indian Rupees"){
 //        tot = amount * 93.45;
 //        JOptionPane.showMessageDialog(this,text+tot.toString());
-        JOptionPane.showMessageDialog(this,amount);
-        x.setText("  "+amount.toString());
+        JOptionPane.showMessageDialog(this,amount+" Rupees");
+        x.setText("  "+amount+" Rupees");
       }
         else if(box1 == "USD" && box2 == "USD"){
 //        tot = amount * 93.45;
 //        JOptionPane.showMessageDialog(this,text+tot.toString());
-        JOptionPane.showMessageDialog(this,amount);
-        x.setText("  "+amount.toString());
+       JOptionPane.showMessageDialog(this,amount+" $");
+        x.setText("  "+amount+" $");
       }
          else  if(box1 == "Bangladeshi Taka" && box2 == "Bangladeshi Taka"){
 //        tot = amount * 93.45;
 //        JOptionPane.showMessageDialog(this,text+tot.toString());
-        JOptionPane.showMessageDialog(this,amount);
-        x.setText("  "+amount.toString());
+        JOptionPane.showMessageDialog(this,amount+" Taka");
+        x.setText("  "+amount+" Taka");
       }
       else if(box1 == "Fahrenheit" && box2 == "Celsius"){
-        tot = (5/9*(amount-32));
-        JOptionPane.showMessageDialog(this,tot.toString());
-        x.setText("  "+tot.toString());
+       
+         tot = ((amount - 32)* 5/9);
+        JOptionPane.showMessageDialog(this,tot+" degree C");
+        x.setText("  "+tot+" degree C");
       }
       
        else if(box1 == "Celsius" && box2 == "Fahrenheit"){
-        tot = ((amount*9/5) + 32);
-        JOptionPane.showMessageDialog(this,tot.toString()+" degree");
-        x.setText("  "+tot.toString());
+//        tot = (9/5)*(amount - 32);
+           tot = (amount * 9/5 +32);
+        JOptionPane.showMessageDialog(this,tot+" degree F");
+        x.setText("  "+tot+" degree F");
       }
        
-          else if(box1 == "Celsius" && box2 == "Celsius"){
+       else if(box1 == "Celsius" && box2 == "Celsius"){
 //        tot = ((amount*9/5) + 32);
-        JOptionPane.showMessageDialog(this,amount.toString()+" degree");
-        x.setText("  " +amount.toString()+" degree");
+        JOptionPane.showMessageDialog(this,amount+" degree C");
+        x.setText("  " +amount+" degree C");
       }
         else if(box1 == "Fahrenheit" && box2 == "Fahrenheit"){
 //        tot = ((amount*9/5) + 32);
-        JOptionPane.showMessageDialog(this,amount.toString()+" degree");
-        x.setText("  "+amount.toString()+" degree");
+        JOptionPane.showMessageDialog(this,amount+" degree F");
+        x.setText("  "+amount+" degree F");
       }
          else{
              JOptionPane.showMessageDialog(this,textError);
